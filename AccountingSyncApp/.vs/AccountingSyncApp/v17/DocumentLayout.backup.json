@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|c:\\users\\varda\\source\\repos\\accountingsyncapp\\infrastructure_layer\\repositories\\xerotokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|solutionrelative:infrastructure_layer\\repositories\\xerotokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|c:\\users\\varda\\source\\repos\\accountingsyncapp\\infrastructure_layer\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|solutionrelative:infrastructure_layer\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8C5FF824-CF69-4C93-973D-1167B63B0033}|Application_Layer\\Application_Layer.csproj|c:\\users\\varda\\source\\repos\\accountingsyncapp\\application_layer\\services\\xeroauthservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C5FF824-CF69-4C93-973D-1167B63B0033}|Application_Layer\\Application_Layer.csproj|solutionrelative:application_layer\\services\\xeroauthservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8C5FF824-CF69-4C93-973D-1167B63B0033}|Application_Layer\\Application_Layer.csproj|c:\\users\\varda\\source\\repos\\accountingsyncapp\\application_layer\\interfaces\\ixeroauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C5FF824-CF69-4C93-973D-1167B63B0033}|Application_Layer\\Application_Layer.csproj|solutionrelative:application_layer\\interfaces\\ixeroauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|c:\\users\\varda\\source\\repos\\accountingsyncapp\\infrastructure_layer\\repositories\\xerotokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|solutionrelative:infrastructure_layer\\repositories\\xerotokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|c:\\users\\varda\\source\\repos\\accountingsyncapp\\infrastructure_layer\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{000F2E74-E453-4884-A3E2-04E1AD566069}|Infrastructure_Layer\\Infrastructure_Layer.csproj|solutionrelative:infrastructure_layer\\helpers\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F85D3C52-A0DD-4FA3-A86F-61D2AC04B4A5}|AccountingSyncApp\\AccountingSyncApp.csproj|c:\\users\\varda\\source\\repos\\accountingsyncapp\\accountingsyncapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,29 +97,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "XeroTokenRepository.cs",
               "DocumentMoniker": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Infrastructure_Layer\\Repositories\\XeroTokenRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure_Layer\\Repositories\\XeroTokenRepository.cs",
               "ToolTip": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Infrastructure_Layer\\Repositories\\XeroTokenRepository.cs",
               "RelativeToolTip": "Infrastructure_Layer\\Repositories\\XeroTokenRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T07:31:28.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "XeroAuthService .cs",
               "DocumentMoniker": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Application_Layer\\Services\\XeroAuthService .cs",
               "RelativeDocumentMoniker": "Application_Layer\\Services\\XeroAuthService .cs",
-              "ToolTip": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Application_Layer\\Services\\XeroAuthService .cs*",
-              "RelativeToolTip": "Application_Layer\\Services\\XeroAuthService .cs*",
+              "ToolTip": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Application_Layer\\Services\\XeroAuthService .cs",
+              "RelativeToolTip": "Application_Layer\\Services\\XeroAuthService .cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAuwGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T06:46:33.713Z",
@@ -127,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "XeroTokenResponse.cs",
               "DocumentMoniker": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Domain_Layer\\Models\\XeroTokenResponse.cs",
               "RelativeDocumentMoniker": "Domain_Layer\\Models\\XeroTokenResponse.cs",
@@ -140,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Infrastructure_Layer\\Helpers\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "Infrastructure_Layer\\Helpers\\DatabaseHelper.cs",
@@ -153,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "IXeroAuthService.cs",
               "DocumentMoniker": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Application_Layer\\Interfaces\\IXeroAuthService.cs",
               "RelativeDocumentMoniker": "Application_Layer\\Interfaces\\IXeroAuthService.cs",

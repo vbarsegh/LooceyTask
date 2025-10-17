@@ -1,6 +1,9 @@
-﻿using Application_Layer.Interfaces;
+﻿using Application_Layer.DTO.Customers;
+using Application_Layer.Interfaces;
 using Application_Layer.Interfaces_Repository;
+using Domain_Layer.Models;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace Application_Layer.Services
 {
@@ -41,25 +44,69 @@ namespace Application_Layer.Services
 
         //Xero → Local DB.
         //When does SyncFromXeroAsync happen?Automatically when Xero sends a webhook → your controller receives it and calls the sync.
-        public async Task SyncFromXeroAsync()//The idea: whenever a webhook from Xero arrives (for example, a new invoice was created in Xero), you can call this method.
+        //what happens->Reads all customers from the local DB. If XeroId is empty → it’s new → create in Xero; otherwise → update Xero record.
+        //The idea: whenever a webhook from Xero arrives (for example, a new invoice was created in Xero), you can call this method.
+        public async Task SyncFromXeroAsync()
         {
-            //what happens->Reads all customers from the local DB. If XeroId is empty → it’s new → create in Xero; otherwise → update Xero record.
             try
             {
-                _logger.LogInformation("Starting Xero → DB synchronization...");
+                _logger.LogInformation("🔄 Starting Xero → DB synchronization...");
 
-                await _xeroCustomerSync.SyncCreatedCustomerAsync(new()); // example placeholder
-                await _xeroInvoiceSync.SyncCreatedInvoiceAsync(new());
-                await _xeroQuoteSync.SyncCreatedQuoteAsync(new());
+                // 1️⃣ Get all contacts from Xero API
+                var contactsJson = await _xeroCustomerSync.FetchContactsFromXeroAsync();
 
-                _logger.LogInformation("Xero → DB synchronization completed successfully.");
+                // 2️⃣ Deserialize JSON
+                var xeroResponse = JsonConvert.DeserializeObject<XeroContactsResponse>(contactsJson);
+
+                if (xeroResponse?.Contacts == null || !xeroResponse.Contacts.Any())
+                {
+                    _logger.LogInformation("No contacts received from Xero.");
+                    return;
+                }
+
+                // 3️⃣ Sync each contact into local DB
+                foreach (var contact in xeroResponse.Contacts)
+                {
+                    var existing = await _customerRepository.GetByXeroIdAsync(contact.ContactID.ToString());
+
+                    if (existing == null)
+                    {
+                        _logger.LogInformation($"🟢 Adding new contact: {contact.Name}");
+
+                        await _customerRepository.InsertAsync(new Customer
+                        {
+                            XeroId = contact.ContactID.ToString(),
+                            Name = contact.Name,
+                            Email = contact.EmailAddress ?? "",
+                            Phone = contact.Phones?.FirstOrDefault()?.PhoneNumber ?? "",
+                            Address = contact.Addresses?.FirstOrDefault()?.AddressLine1 ?? "",
+                            CreatedAt = DateTime.UtcNow,
+                            UpdatedAt = DateTime.UtcNow
+                        });
+                    }
+                    else
+                    {
+                        _logger.LogInformation($"🟡 Updating existing customer: {contact.Name}");
+
+                        existing.Name = contact.Name;
+                        existing.Email = contact.EmailAddress ?? "";
+                        existing.Phone = contact.Phones.FirstOrDefault()?.PhoneNumber ?? "";
+                        existing.Address = contact.Addresses.FirstOrDefault()?.AddressLine1 ?? "";
+                        existing.UpdatedAt = DateTime.UtcNow;
+
+                        await _customerRepository.UpdateAsync(existing);
+                    }
+                }
+
+                _logger.LogInformation("✅ Xero → DB synchronization completed successfully.");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error during Xero → DB synchronization");
+                _logger.LogError(ex, "❌ Error during Xero → DB synchronization");
                 throw;
             }
         }
+
 
         /// //Local DB → Xero.
         public async Task SyncFromDatabaseAsync()
@@ -126,5 +173,33 @@ namespace Application_Layer.Services
             }
         }
 
+
+
+        // ✅ Xero contact response models
+        public class XeroContactsResponse
+        {
+            public List<XeroContact> Contacts { get; set; }
+        }
+
+        public class XeroContact
+        {
+            public string ContactID { get; set; }
+            public string Name { get; set; }
+            public string EmailAddress { get; set; }
+            public List<XeroPhone> Phones { get; set; }
+            public List<XeroAddress> Addresses { get; set; }
+        }
+
+        public class XeroPhone
+        {
+            public string PhoneType { get; set; }
+            public string PhoneNumber { get; set; }
+        }
+
+        public class XeroAddress
+        {
+            public string AddressType { get; set; }
+            public string AddressLine1 { get; set; }
+        }
     }
 }

@@ -1,30 +1,37 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain_Layer.Models
 {
+    [Table("XeroTokenResponse")]//
     public class XeroTokenResponse
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [JsonPropertyName("access_token")]
+        [JsonProperty("access_token")]
         public string AccessToken { get; set; }
 
-        [JsonPropertyName("refresh_token")]
+        [JsonProperty("refresh_token")]
         public string RefreshToken { get; set; }
 
-        [JsonPropertyName("expires_in")]
+        [JsonProperty("expires_in")]
         public int ExpiresIn { get; set; }
 
-        [JsonPropertyName("token_type")]
+        [JsonProperty("token_type")]
         public string TokenType { get; set; }
 
-        [JsonPropertyName("id_token")]
-        public string IdToken { get; set; } = string.Empty;
+        [JsonProperty("id_token")]
+        public string IdToken { get; set; }
+
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }
+
 //[JsonPropertyName("access_token")]
 //public string AccessToken { get; set; } //Why it’s needed
 //Xero sends JSON like this:

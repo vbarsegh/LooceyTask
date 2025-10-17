@@ -100,7 +100,9 @@ namespace Application_Layer.Services
             //You must use the access_token in Authorization header for all Xero API calls://
 
             //Deserialize JSON into C# object
-            var tokenResponse = System.Text.Json.JsonSerializer.Deserialize<XeroTokenResponse>(response.Content);
+            Console.WriteLine("🔍 Xero raw token response: " + response.Content);
+
+            var tokenResponse = JsonConvert.DeserializeObject<XeroTokenResponse>(response.Content);
             if (tokenResponse == null)
                 throw new Exception("Failed to parse token response.");
             tokenResponse.UpdatedAt = DateTime.UtcNow;
@@ -148,17 +150,37 @@ namespace Application_Layer.Services
             var response = await client.ExecuteAsync(request);
 
             if (!response.IsSuccessful)
-                throw new Exception("Failed to refresh token: " + response.Content);
+                throw new Exception("❌ Failed to refresh token: " + response.Content);
 
-            var newToken = JsonConvert.DeserializeObject<XeroTokenResponse>(response.Content);
+            // 🔹 Declare the variable before using it
+            XeroTokenResponse newToken;
+
+            try
+            {
+                newToken = JsonConvert.DeserializeObject<XeroTokenResponse>(
+                    response.Content,
+                    new JsonSerializerSettings
+                    {
+                        MissingMemberHandling = MissingMemberHandling.Ignore
+                    });
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"❌ Failed to deserialize Xero token response: {response.Content}\n{ex}");
+            }
+
             if (newToken == null || string.IsNullOrEmpty(newToken.AccessToken))
             {
-                throw new Exception("❌ Failed to deserialize Xero token response: " + response.Content);
+                throw new Exception($"❌ Xero token response did not contain AccessToken.\nResponse: {response.Content}");
             }
+
             newToken.UpdatedAt = DateTime.UtcNow;
-            //Save the new token
+
+            // 🔹 Save to DB
             await _tokenRepository.SaveTokenAsync(newToken);
+
             return newToken;
         }
+
     }
 }

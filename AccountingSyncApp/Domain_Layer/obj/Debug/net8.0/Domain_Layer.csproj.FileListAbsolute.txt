@@ -9,3 +9,4 @@ C:\Users\varda\source\repos\AccountingSyncApp\Domain_Layer\obj\Debug\net8.0\Doma
 C:\Users\varda\source\repos\AccountingSyncApp\Domain_Layer\obj\Debug\net8.0\refint\Domain_Layer.dll
 C:\Users\varda\source\repos\AccountingSyncApp\Domain_Layer\obj\Debug\net8.0\Domain_Layer.pdb
 C:\Users\varda\source\repos\AccountingSyncApp\Domain_Layer\obj\Debug\net8.0\ref\Domain_Layer.dll
+C:\Users\varda\source\repos\AccountingSyncApp\Domain_Layer\obj\Debug\net8.0\Domain_Layer.csproj.AssemblyReference.cache

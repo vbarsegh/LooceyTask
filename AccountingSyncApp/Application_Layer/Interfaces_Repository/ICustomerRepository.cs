@@ -12,6 +12,6 @@ namespace Application_Layer.Interfaces_Repository
         Task<IEnumerable<Customer>> GetAllAsync();
         Task InsertAsync(Customer customer);
         Task UpdateAsync(Customer customer);
-        Task<Customer?> GetByXeroIdAsync(int id);
+        Task<Customer> GetByXeroIdAsync(string xeroId);
     }
 }

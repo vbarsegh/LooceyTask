@@ -122,8 +122,7 @@
               "RelativeToolTip": "Application_Layer\\Services\\XeroAuthService .cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAuwGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T06:46:33.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T06:46:33.713Z"
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "RelativeToolTip": "Domain_Layer\\Models\\XeroTokenResponse.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAUwCYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:16:01.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:16:01.45Z"
             },
             {
               "$type": "Document",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "Infrastructure_Layer\\Helpers\\DatabaseHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:53:20.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:53:20.332Z"
             },
             {
               "$type": "Document",
@@ -161,8 +158,7 @@
               "RelativeToolTip": "Application_Layer\\Interfaces\\IXeroAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T06:45:17.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T06:45:17.07Z"
             },
             {
               "$type": "Document",
@@ -174,8 +170,7 @@
               "RelativeToolTip": "AccountingSyncApp\\Controllers\\XeroAuthController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAuwDcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T15:18:06.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T15:18:06.202Z"
             },
             {
               "$type": "Document",
@@ -187,8 +182,7 @@
               "RelativeToolTip": "AccountingSyncApp\\Program.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T21:04:47.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T21:04:47.207Z"
             },
             {
               "$type": "Document",
@@ -200,8 +194,7 @@
               "RelativeToolTip": "Application_Layer\\Interfaces_Repository\\IXeroTokenRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:04:35.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T08:04:35.367Z"
             },
             {
               "$type": "Document",
@@ -213,8 +206,7 @@
               "RelativeToolTip": "Infrastructure_Layer\\Repositories\\CustomerRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:50:32.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:50:32.246Z"
             },
             {
               "$type": "Document",
@@ -226,8 +218,7 @@
               "RelativeToolTip": "Domain_Layer\\Models\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:51:02.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:51:02.929Z"
             },
             {
               "$type": "Document",
@@ -239,8 +230,7 @@
               "RelativeToolTip": "Domain_Layer\\Models\\Quote.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:50:56.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:50:56.851Z"
             },
             {
               "$type": "Document",
@@ -252,8 +242,7 @@
               "RelativeToolTip": "Infrastructure_Layer\\Repositories\\InvoiceRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:50:29.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:50:29.461Z"
             },
             {
               "$type": "Document",
@@ -265,8 +254,7 @@
               "RelativeToolTip": "Application_Layer\\Services\\AccountingSyncManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:51:23.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:51:23.029Z"
             },
             {
               "$type": "Document",
@@ -278,8 +266,7 @@
               "RelativeToolTip": "Application_Layer\\Services\\XeroApiManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:51:17.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:51:17.813Z"
             },
             {
               "$type": "Document",
@@ -291,8 +278,7 @@
               "RelativeToolTip": "Domain_Layer\\Models\\Invoice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:50:59.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:50:59.672Z"
             },
             {
               "$type": "Document",
@@ -304,21 +290,19 @@
               "RelativeToolTip": "Infrastructure_Layer\\Repositories\\QuoteRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:50:26.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:50:26.048Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Domain_Layer",
+              "Title": "Domain_Layer.csproj",
               "DocumentMoniker": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Domain_Layer\\Domain_Layer.csproj",
               "RelativeDocumentMoniker": "Domain_Layer\\Domain_Layer.csproj",
               "ToolTip": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Domain_Layer\\Domain_Layer.csproj",
               "RelativeToolTip": "Domain_Layer\\Domain_Layer.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-16T07:02:51.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:02:51.859Z"
             },
             {
               "$type": "Document",
@@ -330,8 +314,7 @@
               "RelativeToolTip": "AccountingSyncApp\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-14T17:24:03.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T17:24:03.582Z"
             },
             {
               "$type": "Document",
@@ -343,8 +326,7 @@
               "RelativeToolTip": "AccountingSyncApp\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-15T16:16:24.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T16:16:24.342Z"
             },
             {
               "$type": "Document",
@@ -356,8 +338,7 @@
               "RelativeToolTip": "AccountingSyncApp\\TextFile.txt",
               "ViewState": "AgIAADIAAAAAAAAAAAAkwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-10-15T15:13:48.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T15:13:48.305Z"
             },
             {
               "$type": "Document",
@@ -369,8 +350,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "ViewState": "AgIAAJIBAAAAAAAAAAArwKgBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-10-15T17:53:19.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-15T17:53:19.239Z"
             },
             {
               "$type": "Document",
@@ -382,8 +362,7 @@
               "RelativeToolTip": "AccountingSyncApp\\AccountingSyncApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-14T20:59:10.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T20:59:10.095Z"
             }
           ]
         }

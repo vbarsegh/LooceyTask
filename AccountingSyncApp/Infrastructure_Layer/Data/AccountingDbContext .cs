@@ -10,9 +10,12 @@ namespace Infrastructure_Layer.Data
     {
         public AccountingDbContext(DbContextOptions<AccountingDbContext> options)
             : base(options) { }
-
+        //parameterless constructor for design-time tools
+        public AccountingDbContext()
+        {
+        }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<XeroTokenResponse> XeroTokensResponse { get; set; }
+        public DbSet<XeroTokenResponse> XeroTokenResponse { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Quote> Quotes { get; set; }
 

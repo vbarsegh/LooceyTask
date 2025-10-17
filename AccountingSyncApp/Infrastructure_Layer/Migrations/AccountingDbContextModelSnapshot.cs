@@ -155,37 +155,32 @@ namespace Infrastructure_Layer.Migrations
 
                     b.Property<string>("AccessToken")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "access_token");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ExpiresIn")
-                        .HasColumnType("int")
-                        .HasAnnotation("Relational:JsonPropertyName", "expires_in");
+                        .HasColumnType("int");
 
                     b.Property<string>("IdToken")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "id_token");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RefreshToken")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "refresh_token");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TokenType")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "token_type");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("XeroTokensResponse");
+                    b.ToTable("XeroTokenResponse");
                 });
 
             modelBuilder.Entity("Domain_Layer.Models.Invoice", b =>

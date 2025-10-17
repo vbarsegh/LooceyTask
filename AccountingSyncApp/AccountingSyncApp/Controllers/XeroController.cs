@@ -28,12 +28,17 @@ namespace AccountingSyncApp.Controllers
         [HttpGet("customers")]
         public async Task<IActionResult> GetCustomers()
         {
-            //it calls Xero’s external API over HTTP.
-            var response = await _xero.GetCustomersAsync();
-            // Suppose you parse the JSON Xero returns into a list of CustomerReadDto:
-            var customers = JsonConvert.DeserializeObject<List<CustomerReadDto>>(response);
-            return Ok(customers);//It returns a JSON string (raw data) containing all customers from Xero
+            var json = await _xero.GetCustomersAsync();
+
+            // Deserialize Xero's response (which wraps contacts inside an object)
+            var xeroResponse = JsonConvert.DeserializeObject<XeroContactsResponse>(json);
+
+            if (xeroResponse?.Contacts == null)
+                return BadRequest("No Contacts found in Xero response.");
+
+            return Ok(xeroResponse.Contacts);
         }
+
         [HttpPost("create-customer")]
         public async Task<IActionResult> CreateCustomer([FromBody] CustomerCreateDto customerDto)
         {

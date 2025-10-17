@@ -28,7 +28,7 @@ namespace Application_Layer.Services
 
         /// <summary>
         /// Karevor:ete petq exav piti regresh token anenq
-        private async Task<string> GetValidAccessTokenAsync()
+        public async Task<string> GetValidAccessTokenAsync()
         {
             var token = await _tokenRepository.GetTokenAsync();
 
@@ -91,46 +91,50 @@ namespace Application_Layer.Services
             // 4. Check if the request was successful
             if (!response.IsSuccessful)
                 throw new Exception($"Xero API error: {response.Content}");
+            Console.WriteLine("📡 Xero response:");
+            Console.WriteLine(response.Content);
 
             return response.Content;
         }
 
-        public async Task<string> CreateCustomerAsync(CustomerCreateDto customer)
-        {
-            //these only talk to Xero API, not your local database yet.
-            //var accessToken = await GetAccessTokenAsync();
-            var accessToken = await GetValidAccessTokenAsync();
-            var client = new RestClient("https://api.xero.com/api.xro/2.0/Contacts");
-            var request = new RestRequest();
-            request.Method = Method.Post;
-
-            request.AddHeader("Authorization", $"Bearer {accessToken}");
-            request.AddHeader("xero-tenant-id", _config["XeroSettings:TenantId"]);
-
-            request.AddHeader("Accept", "application/json");
-            request.AddHeader("Content-Type", "application/json");
-
-            var body = new
+            public async Task<string> CreateCustomerAsync(CustomerCreateDto customer)
             {
-                Name = customer.Name,
-                EmailAddress = customer.Email,
-                Phones = new[]
-                {
-                    new { PhoneType = "DEFAULT", PhoneNumber = customer.Phone }
-                },
-                        Addresses = new[]
-                {
-                    new { AddressType = "STREET", AddressLine1 = customer.Address }
-                }
-            };
-            request.AddJsonBody(body);
+                //these only talk to Xero API, not your local database yet.
+                //var accessToken = await GetAccessTokenAsync();
+                var accessToken = await GetValidAccessTokenAsync();
+                var client = new RestClient("https://api.xero.com/api.xro/2.0/Contacts");
+                var request = new RestRequest();
+                request.Method = Method.Post;
 
-            var response = await client.ExecuteAsync(request);
-            if (!response.IsSuccessful)
-                throw new Exception($"Xero API error: {response.Content}");
+                request.AddHeader("Authorization", $"Bearer {accessToken}");
+                request.AddHeader("xero-tenant-id", _config["XeroSettings:TenantId"]);
 
-            return response.Content;
-        }
+                request.AddHeader("Accept", "application/json");
+                request.AddHeader("Content-Type", "application/json");
+
+                var body = new
+                {
+                    Name = customer.Name,
+                    EmailAddress = customer.Email,
+                    Phones = new[]
+                    {
+                        new { PhoneType = "DEFAULT", PhoneNumber = customer.Phone }
+                    },
+                            Addresses = new[]
+                    {
+                        new { AddressType = "STREET", AddressLine1 = customer.Address }
+                    }
+                };
+                request.AddJsonBody(body);
+
+                var response = await client.ExecuteAsync(request);
+                if (!response.IsSuccessful)
+                    throw new Exception($"Xero API error: {response.Content}");
+
+                Console.WriteLine("➡️ Xero request body: " + JsonConvert.SerializeObject(body));
+                Console.WriteLine("⬅️ Xero raw response: " + response.Content);
+                return response.Content;
+            }
         //The difference is the URL and whether XeroId exists. That’s how Xero knows “create” vs “update.”
         public async Task<string> UpdateCustomerAsync(CustomerCreateDto customer)
         {

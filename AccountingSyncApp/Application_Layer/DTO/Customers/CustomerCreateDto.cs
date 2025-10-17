@@ -8,7 +8,7 @@ namespace Application_Layer.DTO.Customers
 {
     public class CustomerCreateDto
     {
-        public string XeroId { get; set; }  // the invoice ID in Xero
+        public string? XeroId { get; set; }  // the invoice ID in Xero
 
         public string Name { get; set; }
         public string Email { get; set; }

@@ -1065,6 +1065,9 @@
         }
       },
       "Domain_Layer/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
         "runtime": {
           "Domain_Layer.dll": {
             "assemblyVersion": "1.0.0.0",

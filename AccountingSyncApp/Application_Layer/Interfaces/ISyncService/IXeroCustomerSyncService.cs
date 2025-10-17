@@ -5,6 +5,7 @@ namespace Application_Layer.Interfaces
 {
     public interface IXeroCustomerSyncService
     {
+        Task<string> FetchContactsFromXeroAsync();
         Task<Customer> SyncCreatedCustomerAsync(CustomerCreateDto dto);
         Task<string> SyncUpdatedCustomerAsync(CustomerCreateDto dto);
         Task<Customer> CreateCustomerAndSyncAsync(Customer customer);

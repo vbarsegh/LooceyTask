@@ -17,22 +17,45 @@ namespace Infrastructure_Layer.Repositories
         public async Task<XeroTokenResponse?> GetTokenAsync()
         {
             // Returns the most recently saved token
-            return await _context.XeroTokensResponse
+            return await _context.XeroTokenResponse
                 .OrderByDescending(t => t.UpdatedAt)
                 .FirstOrDefaultAsync();
         }
 
+        //public async Task SaveTokenAsync(XeroTokenResponse token)
+        //{
+        //    if (token == null)
+        //        throw new ArgumentNullException(nameof(token));
+
+        //    // Optional: update UpdatedAt
+        //    token.UpdatedAt = DateTime.UtcNow;
+
+        //    // Add new token record
+        //    _context.XeroTokenResponse.Add(token);
+        //    await _context.SaveChangesAsync();
+        //}
         public async Task SaveTokenAsync(XeroTokenResponse token)
         {
-            if (token == null)
-                throw new ArgumentNullException(nameof(token));
+            var existing = await _context.XeroTokenResponse.FirstOrDefaultAsync();
 
-            // Optional: update UpdatedAt
-            token.UpdatedAt = DateTime.UtcNow;
+            if (existing == null)
+            {
+                // first-time insert
+                _context.XeroTokenResponse.Add(token);
+            }
+            else
+            {
+                // update only relevant fields
+                existing.AccessToken = token.AccessToken;
+                existing.RefreshToken = token.RefreshToken;
+                existing.ExpiresIn = token.ExpiresIn;
+                existing.TokenType = token.TokenType;
+                existing.IdToken = token.IdToken;
+                existing.UpdatedAt = DateTime.UtcNow;
+            }
 
-            // Add new token record
-            _context.XeroTokensResponse.Add(token);
             await _context.SaveChangesAsync();
         }
+
     }
 }

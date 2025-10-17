@@ -37,9 +37,9 @@ namespace Infrastructure_Layer.Repositories
             _context.Customers.Update(customer);
             await _context.SaveChangesAsync();
         }
-        public async Task<Customer?> GetByXeroIdAsync(int id)
+        public async Task<Customer> GetByXeroIdAsync(string xeroId)
         {
-            return await _context.Customers.FindAsync(id);
+            return await _context.Customers.FirstOrDefaultAsync(c => c.XeroId == xeroId);
         }
     }
 }

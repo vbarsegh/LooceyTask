@@ -1,9 +1,12 @@
 ﻿using Application_Layer.DTO.Customers;
 using Application_Layer.Interfaces;
 using Application_Layer.Interfaces_Repository;
+using Application_Layer.Services;
 using Domain_Layer.Models;
 using Infrastructure_Layer.Repositories;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +19,33 @@ namespace Infrastructure_Layer.Services
     {
         private readonly IXeroApiManager _xero;
         private readonly ICustomerRepository _customers;
+        private readonly IConfiguration _config;
 
-        public XeroCustomerSyncService(IXeroApiManager xero, ICustomerRepository customers)
+        public XeroCustomerSyncService(IXeroApiManager xero, ICustomerRepository customers, IConfiguration config)
         {
             _xero = xero;
             _customers = customers;
+            _config= config;
+        }
+
+        public async Task<string> FetchContactsFromXeroAsync()
+        {
+            var accessToken = await _xero.GetValidAccessTokenAsync();
+
+            var client = new RestClient("https://api.xero.com/api.xro/2.0/Contacts");
+            var request = new RestRequest()
+            {
+                Method = RestSharp.Method.Get
+            };
+            request.AddHeader("Authorization", $"Bearer {accessToken}");
+            request.AddHeader("xero-tenant-id", _config["XeroSettings:TenantId"]);
+            request.AddHeader("Accept", "application/json");
+
+            var response = await client.ExecuteAsync(request);
+            if (!response.IsSuccessful)
+                throw new Exception($"❌ Failed to fetch contacts from Xero: {response.Content}");
+
+            return response.Content;
         }
         //// Xero first, then DB
         public async Task<Customer> SyncCreatedCustomerAsync(CustomerCreateDto dto)
@@ -52,7 +77,7 @@ namespace Infrastructure_Layer.Services
             var updatedXeroCustomer = JsonConvert.DeserializeObject<CustomerReadDto>(xeroResponse);
 
             // 3️⃣ Find the same customer in local DB by XeroId
-            var localCustomer = await _customers.GetByXeroIdAsync(int.Parse(updatedXeroCustomer.XeroId));
+            var localCustomer = await _customers.GetByXeroIdAsync(updatedXeroCustomer.XeroId);
             if (localCustomer == null)
                 throw new Exception("Customer not found in local database.");
 

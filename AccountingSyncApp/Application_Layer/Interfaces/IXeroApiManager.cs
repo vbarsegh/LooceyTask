@@ -7,6 +7,7 @@ namespace Application_Layer.Interfaces
     public interface IXeroApiManager
     {
         //knjens verjum
+        Task<string> GetValidAccessTokenAsync();
         Task<string> GetConnectionsAsync();
         // Customers
         Task<string> GetCustomersAsync();
