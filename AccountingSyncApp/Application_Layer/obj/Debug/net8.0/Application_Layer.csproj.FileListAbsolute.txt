@@ -1,0 +1,15 @@
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\bin\Debug\net8.0\Application_Layer.deps.json
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\bin\Debug\net8.0\Application_Layer.dll
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\bin\Debug\net8.0\Application_Layer.pdb
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\bin\Debug\net8.0\Domain_Layer.dll
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\bin\Debug\net8.0\Domain_Layer.pdb
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Application_Layer.csproj.AssemblyReference.cache
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Application_Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Application_Layer.AssemblyInfoInputs.cache
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Application_Layer.AssemblyInfo.cs
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Application_Layer.csproj.CoreCompileInputs.cache
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Applicat.D437B477.Up2Date
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Application_Layer.dll
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\refint\Application_Layer.dll
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\Application_Layer.pdb
+C:\Users\varda\source\repos\AccountingSyncApp\Application_Layer\obj\Debug\net8.0\ref\Application_Layer.dll

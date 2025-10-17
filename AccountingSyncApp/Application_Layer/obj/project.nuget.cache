@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "FxtQ4qvVHF0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Application_Layer\\Application_Layer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.10\\microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.10\\microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.10\\microsoft.extensions.logging.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.10\\microsoft.extensions.primitives.9.0.10.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.10\\system.diagnostics.diagnosticsource.9.0.10.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}

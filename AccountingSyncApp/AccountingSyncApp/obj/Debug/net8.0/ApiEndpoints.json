@@ -1,0 +1,210 @@
+[
+  {
+    "ContainingType": "SyncController",
+    "Method": "SyncXero",
+    "RelativePath": "api/sync/xero",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "XeroWebhookController",
+    "Method": "ReceiveWebhook",
+    "RelativePath": "api/webhooks/xero",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "GetConnections",
+    "RelativePath": "api/Xero/connections",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "CreateCustomer",
+    "RelativePath": "api/Xero/create-customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerDto",
+        "Type": "Application_Layer.DTO.Customers.CustomerCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "CreateInvoice",
+    "RelativePath": "api/Xero/create-invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.InvoiceCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "CreateQuote",
+    "RelativePath": "api/Xero/create-quote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.QuoteCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "GetCustomers",
+    "RelativePath": "api/Xero/customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "GetInvoices",
+    "RelativePath": "api/Xero/invoices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "GetQuotes",
+    "RelativePath": "api/Xero/quotes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "UpdateCustomer",
+    "RelativePath": "api/Xero/update-customer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerDto",
+        "Type": "Application_Layer.DTO.Customers.CustomerCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "UpdateInvoice",
+    "RelativePath": "api/Xero/update-invoice",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.InvoiceCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroController",
+    "Method": "UpdateQuote",
+    "RelativePath": "api/Xero/update-quote",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.QuoteCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroAuthController",
+    "Method": "Callback",
+    "RelativePath": "api/XeroAuth/callback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "state",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.XeroAuthController",
+    "Method": "Login",
+    "RelativePath": "api/XeroAuth/login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountingSyncApp.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AccountingSyncApp.WeatherForecast, AccountingSyncApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

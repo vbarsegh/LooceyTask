@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "MkSg1ze0zq0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\varda\\source\\repos\\AccountingSyncApp\\Domain_Layer\\Domain_Layer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\varda\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}
